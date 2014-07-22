@@ -56,7 +56,7 @@ SushiSprite *SushiSprite::create(int row, int col)
 	SushiSprite *sushi = new SushiSprite();
 	sushi->m_row = row;
 	sushi->m_col = col;
-    sushi->m_imgIndex = arc4random() % TOTAL_SUSHI;
+    sushi->m_imgIndex = rand() % TOTAL_SUSHI;
     sushi->initWithSpriteFrameName(sushiNormal[sushi->m_imgIndex]);
 	sushi->autorelease();
 	return sushi;

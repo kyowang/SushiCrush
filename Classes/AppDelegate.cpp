@@ -19,12 +19,14 @@ bool AppDelegate::applicationDidFinishLaunching() {
         glview = GLView::create("Sushi crush");
         director->setOpenGLView(glview);
     }
-    
-    glview->setDesignResolutionSize(320.0f, 480.0f, ResolutionPolicy::FIXED_WIDTH);
+	Size designsize = Size(640.0, 960.0);
+	 
+	glview->setFrameSize(designsize.width,designsize.height);
+	glview->setDesignResolutionSize(designsize.width, designsize.height, ResolutionPolicy::FIXED_WIDTH);
     std::vector<std::string> searchPath;
     searchPath.push_back("w640");
     CCFileUtils::getInstance()->setSearchPaths(searchPath);
-    director->setContentScaleFactor(640.0f / 320.0f);
+	director->setContentScaleFactor(640.0f / designsize.width);
 
     // turn on display FPS
     director->setDisplayStats(true);
