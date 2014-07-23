@@ -21,7 +21,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     }
 	Size designsize = Size(640.0, 960.0);
 	 
-	glview->setFrameSize(designsize.width,designsize.height);
+	glview->setFrameSize(designsize.width/2,designsize.height/2);
 	glview->setDesignResolutionSize(designsize.width, designsize.height, ResolutionPolicy::FIXED_WIDTH);
     std::vector<std::string> searchPath;
     searchPath.push_back("w640");
