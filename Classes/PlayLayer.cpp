@@ -1,10 +1,10 @@
 #include "PlayLayer.h"
 #include "SushiSprite.h"
 
-#define MATRIX_WIDTH (7)
+#define MATRIX_WIDTH (6)
 #define MATRIX_HEIGHT (9)
 
-#define SUSHI_GAP (1)
+#define SUSHI_GAP (8)
 
 PlayLayer::PlayLayer()
 : spriteSheet(NULL)
@@ -51,8 +51,8 @@ bool PlayLayer::init()
     this->addChild(background,-1);
     
     // init spriteSheet
-    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("sushi.plist");
-    spriteSheet = SpriteBatchNode::create("sushi.pvr.ccz");
+    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("cars.plist");
+    spriteSheet = SpriteBatchNode::create("cars.png");
     addChild(spriteSheet);
     
     // Yes, you can load this value from other module.
@@ -377,9 +377,17 @@ void PlayLayer::fillVacancies()
                     // move to new position
                     Point startPosition = sushi->getPosition();
                     Point endPosition = positionOfItem(newRow, col);
+					Point endPosition1 = Point(endPosition.x, endPosition.y - 8);
                     float speed = (startPosition.y - endPosition.y) / size.height;
                     sushi->stopAllActions();// must stop pre drop action
-                    sushi->runAction(CCMoveTo::create(speed, endPosition));
+                    //sushi->runAction(CCMoveTo::create(speed, endPosition));
+					auto move = MoveTo::create(0.8, endPosition1);
+					auto elastic = EaseExponentialOut::create(move->clone());
+					sushi->runAction(elastic);
+					//sushi->runAction(Sequence::create(MoveTo::create(speed, endPosition1),
+						//							  MoveTo::create(speed/3, endPosition),
+							//						  NULL,
+								//					  NULL));
                     // set the new row to item
                     sushi->setRow(newRow);
                 }
@@ -434,9 +442,9 @@ void PlayLayer::explodeSpecialH(Point point)
     Size size = Director::getInstance()->getWinSize();
     float scaleX = 4 ;
     float scaleY = 0.7 ;
-    float time = 0.3;
+	float time = 0.3;
     Point startPosition = point;
-    float speed = 0.6f;
+	float speed = 0.6f;
     
     auto colorSpriteRight = Sprite::create("colorHRight.png");
 	addChild(colorSpriteRight, 10);
@@ -464,9 +472,9 @@ void PlayLayer::explodeSpecialV(Point point)
     Size size = Director::getInstance()->getWinSize();
     float scaleY = 4 ;
     float scaleX = 0.7 ;
-    float time = 0.3;
+	float time = 0.3;
     Point startPosition = point;
-    float speed = 0.6f;
+	float speed = 0.6f;
 
     auto colorSpriteDown = Sprite::create("colorVDown.png");
 	addChild(colorSpriteDown, 10);
@@ -509,7 +517,7 @@ void PlayLayer::explodeSushi(SushiSprite *sushi)
 	addChild(circleSprite, 10);
 	circleSprite->setPosition(sushi->getPosition());
 	circleSprite->setScale(0);// start size
-    circleSprite->runAction(Sequence::create(ScaleTo::create(time, 1.0),
+    circleSprite->runAction(Sequence::create(ScaleTo::create(time, 1.5),
                                              CallFunc::create(CC_CALLBACK_0(Sprite::removeFromParent, circleSprite)),
                                              NULL));
 
@@ -656,7 +664,14 @@ void PlayLayer::createAndDropSushi(int row, int col)
     Point startPosition = Point(endPosition.x, endPosition.y + size.height / 2);
     sushi->setPosition(startPosition);
     float speed = startPosition.y / (1.5 * size.height);
-    sushi->runAction(MoveTo::create(speed, endPosition));
+    //sushi->runAction(MoveTo::create(speed, endPosition));
+	Point endPosition1 = Point(endPosition.x, endPosition.y - 8);
+	//float speed = (startPosition.y - endPosition.y) / size.height;
+	sushi->stopAllActions();// must stop pre drop action
+	//sushi->runAction(CCMoveTo::create(speed, endPosition));
+	auto move = MoveTo::create(0.8, endPosition1);
+	auto elastic = EaseExponentialOut::create(move->clone());
+	sushi->runAction(elastic);
     // add to BatchNode
     spriteSheet->addChild(sushi);
 

@@ -1,34 +1,44 @@
+#include "cocos2d.h"
 #include "SushiSprite.h"
+
 
 USING_NS_CC;
 
-#define TOTAL_SUSHI (6)
+#define TOTAL_SUSHI (7)
 
 static const char *sushiNormal[TOTAL_SUSHI] = {
-	"sushi_1n.png",
-	"sushi_2n.png",
-	"sushi_3n.png",
-	"sushi_4n.png",
-	"sushi_5n.png",
-    "sushi_6n.png"
+	"n_bmw.png",
+	"n_mazda.png",
+	"n_fiat.png",
+	//"n_landrover.png",
+	"n_saab.png",
+    "n_vw.png",
+	"n_alfa.png",
+	"n_lambo.png"
 };
 
 static const char *sushiVertical[TOTAL_SUSHI] = {
-	"sushi_1v.png",
-	"sushi_2v.png",
-	"sushi_3v.png",
-	"sushi_4v.png",
-	"sushi_5v.png",
-    "sushi_6v.png"
+	"n_bmw.png",
+	"n_mazda.png",
+	"n_fiat.png",
+	//"n_landrover.png",
+	"n_saab.png",
+	"n_vw.png",
+	"n_alfa.png",
+	"n_lambo.png"
+
 };
 
 static const char *sushiHorizontal[TOTAL_SUSHI] = {
-	"sushi_1h.png",
-	"sushi_2h.png",
-	"sushi_3h.png",
-	"sushi_4h.png",
-	"sushi_5h.png",
-    "sushi_6h.png"
+	"n_bmw.png",
+	"n_mazda.png",
+	"n_fiat.png",
+	//"n_landrover.png",
+	"n_saab.png",
+	"n_vw.png",
+	"n_alfa.png",
+	"n_lambo.png"
+
 };
 
 float SushiSprite::getContentWidth()
@@ -56,6 +66,11 @@ SushiSprite *SushiSprite::create(int row, int col)
 	SushiSprite *sushi = new SushiSprite();
 	sushi->m_row = row;
 	sushi->m_col = col;
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) 
+	srand(rand() + GetTickCount());
+#else
+	srand(rand() + 1199);
+#endif
     sushi->m_imgIndex = rand() % TOTAL_SUSHI;
     sushi->initWithSpriteFrameName(sushiNormal[sushi->m_imgIndex]);
 	sushi->autorelease();

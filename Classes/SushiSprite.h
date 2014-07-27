@@ -25,6 +25,9 @@ public:
     CC_SYNTHESIZE(bool, m_ignoreCheck, IgnoreCheck);//新产生的4消寿司，本轮不被消除
     CC_SYNTHESIZE_READONLY(DisplayMode, m_displayMode, DisplayMode);
     void setDisplayMode(DisplayMode mode);
+	//static time_t stime;
+	//static cc_timeval stime;
+	//static unsigned long int rand_seed;
 };
 
 #endif /* defined(__SushiSprite_H__) */
