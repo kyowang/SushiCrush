@@ -20,8 +20,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
         director->setOpenGLView(glview);
     }
 	Size designsize = Size(800.0, 1200.0);
-	 
-	//glview->setFrameSize(designsize.width/2,designsize.height/2);
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) 
+	glview->setFrameSize(designsize.width/2,designsize.height/2);
+#endif
 	glview->setDesignResolutionSize(designsize.width, designsize.height, ResolutionPolicy::FIXED_WIDTH);
     std::vector<std::string> searchPath;
     searchPath.push_back("w640");

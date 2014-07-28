@@ -4,10 +4,192 @@
     <dict>
         <key>frames</key>
         <dict>
+            <key>h_alfa.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{104,1726},{100,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>h_bmw.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,1726},{100,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>h_fiat.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{104,1624},{100,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>h_lambo.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,1624},{100,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>h_landrover.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{104,2},{100,64}}</string>
+                <key>offset</key>
+                <string>{0,-4}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,22},{100,64}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>h_lotus.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{104,1522},{100,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>h_mazda.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{104,228},{100,84}}</string>
+                <key>offset</key>
+                <string>{0,-1}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,9},{100,84}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>h_porsche.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,1522},{100,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>h_saab.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{104,1420},{100,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>h_skoda (2).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{104,406},{100,98}}</string>
+                <key>offset</key>
+                <string>{0,-1}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,2},{100,98}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>h_skoda.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{104,406},{100,98}}</string>
+                <key>offset</key>
+                <string>{0,-1}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,2},{100,98}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>h_toyota.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{100,68},{100,76}}</string>
+                <key>offset</key>
+                <string>{0,-5}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,17},{100,76}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>h_vw (2).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,1420},{100,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>h_vw.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{104,1318},{100,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
             <key>n_alfa.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,308},{100,100}}</string>
+                <string>{{2,1318},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -20,7 +202,7 @@
             <key>n_benz.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,848},{98,98}}</string>
+                <string>{{2,602},{98,98}}</string>
                 <key>offset</key>
                 <string>{1,-1}</string>
                 <key>rotated</key>
@@ -33,7 +215,7 @@
             <key>n_bmw.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,206},{100,100}}</string>
+                <string>{{104,1216},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,11 +228,11 @@
             <key>n_fiat.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,410},{98,100}}</string>
+                <string>{{2,702},{98,100}}</string>
                 <key>offset</key>
                 <string>{1,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{2,0},{98,100}}</string>
                 <key>sourceSize</key>
@@ -59,7 +241,7 @@
             <key>n_lambo.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,948},{90,98}}</string>
+                <string>{{104,314},{90,98}}</string>
                 <key>offset</key>
                 <string>{2,-1}</string>
                 <key>rotated</key>
@@ -72,7 +254,7 @@
             <key>n_landrover.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,686},{100,60}}</string>
+                <string>{{2,2},{100,60}}</string>
                 <key>offset</key>
                 <string>{0,-4}</string>
                 <key>rotated</key>
@@ -85,7 +267,7 @@
             <key>n_mazda.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,600},{100,84}}</string>
+                <string>{{2,228},{100,84}}</string>
                 <key>offset</key>
                 <string>{0,-1}</string>
                 <key>rotated</key>
@@ -98,7 +280,7 @@
             <key>n_porsche.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,1040},{76,98}}</string>
+                <string>{{2,146},{76,98}}</string>
                 <key>offset</key>
                 <string>{0,-1}</string>
                 <key>rotated</key>
@@ -111,7 +293,7 @@
             <key>n_saab.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,104},{100,100}}</string>
+                <string>{{2,1216},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -124,7 +306,7 @@
             <key>n_skoda.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,748},{98,98}}</string>
+                <string>{{2,502},{98,98}}</string>
                 <key>offset</key>
                 <string>{1,-1}</string>
                 <key>rotated</key>
@@ -137,7 +319,7 @@
             <key>n_toyota.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,1118},{96,68}}</string>
+                <string>{{2,64},{96,68}}</string>
                 <key>offset</key>
                 <string>{2,-5}</string>
                 <key>rotated</key>
@@ -150,7 +332,7 @@
             <key>n_volvo.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,510},{100,88}}</string>
+                <string>{{2,314},{100,88}}</string>
                 <key>offset</key>
                 <string>{0,-3}</string>
                 <key>rotated</key>
@@ -163,7 +345,163 @@
             <key>n_vw.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{100,100}}</string>
+                <string>{{104,1114},{100,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>v_alfa.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,1114},{100,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>v_bmw.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{104,1012},{100,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>v_fiat.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{102,606},{98,100}}</string>
+                <key>offset</key>
+                <string>{1,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{2,0},{98,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>v_lambo.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,404},{96,100}}</string>
+                <key>offset</key>
+                <string>{2,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{4,0},{96,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>v_landrover.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,1012},{100,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>v_lotus.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{104,910},{100,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>v_mazda.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,910},{100,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>v_porsche.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{102,146},{80,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{10,0},{80,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>v_saab.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{104,808},{100,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>v_skoda.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{102,506},{98,100}}</string>
+                <key>offset</key>
+                <string>{1,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{2,0},{98,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>v_toyota.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,808},{100,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,100}}</string>
+                <key>sourceSize</key>
+                <string>{100,100}</string>
+            </dict>
+            <key>v_vw.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{102,706},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -181,9 +519,9 @@
             <key>realTextureFileName</key>
             <string>cars.png</string>
             <key>size</key>
-            <string>{104,1188}</string>
+            <string>{206,1828}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:4f107c879891b2cc6bdc6473a2c1327c:33bc2fc9acf4c3f3022f42506493594f:f65cfb0a0d7ae65d748755d460dafa4a$</string>
+            <string>$TexturePacker:SmartUpdate:e9a93904651199aaf54a7c1a5b5f8656:9e97a532859eae1916d6ef7526a9ad2e:f65cfb0a0d7ae65d748755d460dafa4a$</string>
             <key>textureFileName</key>
             <string>cars.png</string>
         </dict>

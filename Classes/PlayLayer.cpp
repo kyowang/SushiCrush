@@ -101,91 +101,119 @@ SushiSprite *PlayLayer::sushiOfPoint(Point *point)
 
 bool PlayLayer::onTouchBegan(Touch *touch, Event *unused)
 {
-    m_srcSushi = NULL;
-    m_destSushi = NULL;
-    if (m_isTouchEnable) {
-        auto location = touch->getLocation();
-        m_srcSushi = sushiOfPoint(&location);
-    }
+	m_isMoved = false;
+	if (NULL == m_srcSushi)
+	{
+		if (m_isTouchEnable) {
+			auto location = touch->getLocation();
+			m_srcSushi = sushiOfPoint(&location);
+			m_srcSushi->setFlippedY(true);
+		}
+	}
+	else
+	{
+		auto location = touch->getLocation();
+		checkLocationAndSwap(location);
+	}    
     return m_isTouchEnable;
+}
+
+void PlayLayer::onTouchEnded(Touch *touch, Event *unused)
+{
+	
 }
 
 void PlayLayer::onTouchMoved(Touch *touch, Event *unused)
 {
+	m_isMoved = true;
     if (!m_srcSushi || !m_isTouchEnable) {
         return;
     }
-    
-    int row = m_srcSushi->getRow();
-    int col = m_srcSushi->getCol();
-    
-    auto location = touch->getLocation();
-    auto halfSushiWidth = m_srcSushi->getContentSize().width / 2;
-    auto halfSushiHeight = m_srcSushi->getContentSize().height / 2;
-    
-    auto  upRect = Rect(m_srcSushi->getPositionX() - halfSushiWidth,
-                        m_srcSushi->getPositionY() + halfSushiHeight,
-                        m_srcSushi->getContentSize().width,
-                        m_srcSushi->getContentSize().height);
-    
-    if (upRect.containsPoint(location)) {
-        row++;
-        if (row < m_height) {
-            m_destSushi = m_matrix[row * m_width + col];
-        }
-        m_movingVertical = true;
-        swapSushi();
-        return;
-    }
-    
-    auto  downRect = Rect(m_srcSushi->getPositionX() - halfSushiWidth,
-                        m_srcSushi->getPositionY() - (halfSushiHeight * 3),
-                        m_srcSushi->getContentSize().width,
-                        m_srcSushi->getContentSize().height);
-    
-    if (downRect.containsPoint(location)) {
-        row--;
-        if (row >= 0) {
-            m_destSushi = m_matrix[row * m_width + col];
-        }
-        m_movingVertical = true;
-        swapSushi();
-        return;
-    }
-    
-    auto  leftRect = Rect(m_srcSushi->getPositionX() - (halfSushiWidth * 3),
-                          m_srcSushi->getPositionY() - halfSushiHeight,
-                          m_srcSushi->getContentSize().width,
-                          m_srcSushi->getContentSize().height);
-    
-    if (leftRect.containsPoint(location)) {
-        col--;
-        if (col >= 0) {
-            m_destSushi = m_matrix[row * m_width + col];
-        }
-        m_movingVertical = false;
-        swapSushi();
-        return;
-    }
-    
-    auto  rightRect = Rect(m_srcSushi->getPositionX() + halfSushiWidth,
-                          m_srcSushi->getPositionY() - halfSushiHeight,
-                          m_srcSushi->getContentSize().width,
-                          m_srcSushi->getContentSize().height);
-    
-    if (rightRect.containsPoint(location)) {
-        col++;
-        if (col < m_width) {
-            m_destSushi = m_matrix[row * m_width + col];
-        }
-        m_movingVertical = false;
-        swapSushi();
-        return;
-    }
-    
+	auto location = touch->getLocation();
+	checkLocationAndSwap(location);
     // not a useful movement
 }
+void PlayLayer::checkLocationAndSwap(Point location)
+{
+	int row = m_srcSushi->getRow();
+	int col = m_srcSushi->getCol();
 
+	auto halfSushiWidth = m_srcSushi->getContentSize().width / 2;
+	auto halfSushiHeight = m_srcSushi->getContentSize().height / 2;
+
+	auto  upRect = Rect(m_srcSushi->getPositionX() - halfSushiWidth,
+		m_srcSushi->getPositionY() + halfSushiHeight,
+		m_srcSushi->getContentSize().width,
+		m_srcSushi->getContentSize().height);
+
+	if (upRect.containsPoint(location)) {
+		row++;
+		if (row < m_height) {
+			m_destSushi = m_matrix[row * m_width + col];
+		}
+		m_movingVertical = true;
+		swapSushi();
+		m_srcSushi->setFlippedY(false);
+		m_srcSushi = NULL;
+		m_destSushi = NULL;
+		return;
+	}
+
+	auto  downRect = Rect(m_srcSushi->getPositionX() - halfSushiWidth,
+		m_srcSushi->getPositionY() - (halfSushiHeight * 3),
+		m_srcSushi->getContentSize().width,
+		m_srcSushi->getContentSize().height);
+
+	if (downRect.containsPoint(location)) {
+		row--;
+		if (row >= 0) {
+			m_destSushi = m_matrix[row * m_width + col];
+		}
+		m_movingVertical = true;
+		swapSushi();
+		m_srcSushi->setFlippedY(false);
+		m_srcSushi = NULL;
+		m_destSushi = NULL;
+		return;
+	}
+
+	auto  leftRect = Rect(m_srcSushi->getPositionX() - (halfSushiWidth * 3),
+		m_srcSushi->getPositionY() - halfSushiHeight,
+		m_srcSushi->getContentSize().width,
+		m_srcSushi->getContentSize().height);
+
+	if (leftRect.containsPoint(location)) {
+		col--;
+		if (col >= 0) {
+			m_destSushi = m_matrix[row * m_width + col];
+		}
+		m_movingVertical = false;
+		swapSushi();
+		m_srcSushi->setFlippedY(false);
+		m_srcSushi = NULL;
+		m_destSushi = NULL;
+		return;
+	}
+
+	auto  rightRect = Rect(m_srcSushi->getPositionX() + halfSushiWidth,
+		m_srcSushi->getPositionY() - halfSushiHeight,
+		m_srcSushi->getContentSize().width,
+		m_srcSushi->getContentSize().height);
+
+	if (rightRect.containsPoint(location)) {
+		col++;
+		if (col < m_width) {
+			m_destSushi = m_matrix[row * m_width + col];
+		}
+		m_movingVertical = false;
+		swapSushi();
+		m_srcSushi->setFlippedY(false);
+		m_srcSushi = NULL;
+		m_destSushi = NULL;
+		return;
+	}
+
+}
 void PlayLayer::swapSushi()
 {
     m_isAnimationing = true;
@@ -663,13 +691,10 @@ void PlayLayer::createAndDropSushi(int row, int col)
     Point endPosition = positionOfItem(row, col);
     Point startPosition = Point(endPosition.x, endPosition.y + size.height / 2);
     sushi->setPosition(startPosition);
-    float speed = startPosition.y / (1.5 * size.height);
-    //sushi->runAction(MoveTo::create(speed, endPosition));
+	float speed = 0.8;
 	Point endPosition1 = Point(endPosition.x, endPosition.y - 8);
-	//float speed = (startPosition.y - endPosition.y) / size.height;
 	sushi->stopAllActions();// must stop pre drop action
-	//sushi->runAction(CCMoveTo::create(speed, endPosition));
-	auto move = MoveTo::create(0.8, endPosition1);
+	auto move = MoveTo::create(speed, endPosition1);
 	auto elastic = EaseExponentialOut::create(move->clone());
 	sushi->runAction(elastic);
     // add to BatchNode

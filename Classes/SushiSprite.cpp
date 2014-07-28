@@ -4,7 +4,7 @@
 
 USING_NS_CC;
 
-#define TOTAL_SUSHI (7)
+#define TOTAL_SUSHI (6)
 
 static const char *sushiNormal[TOTAL_SUSHI] = {
 	"n_bmw.png",
@@ -13,31 +13,31 @@ static const char *sushiNormal[TOTAL_SUSHI] = {
 	//"n_landrover.png",
 	"n_saab.png",
     "n_vw.png",
-	"n_alfa.png",
+	//"n_alfa.png",
 	"n_lambo.png"
 };
 
 static const char *sushiVertical[TOTAL_SUSHI] = {
-	"n_bmw.png",
-	"n_mazda.png",
-	"n_fiat.png",
+	"v_bmw.png",
+	"v_mazda.png",
+	"v_fiat.png",
 	//"n_landrover.png",
-	"n_saab.png",
-	"n_vw.png",
-	"n_alfa.png",
-	"n_lambo.png"
+	"v_saab.png",
+	"v_vw.png",
+	//"v_alfa.png",
+	"v_lambo.png"
 
 };
 
 static const char *sushiHorizontal[TOTAL_SUSHI] = {
-	"n_bmw.png",
-	"n_mazda.png",
-	"n_fiat.png",
+	"h_bmw.png",
+	"h_mazda.png",
+	"h_fiat.png",
 	//"n_landrover.png",
-	"n_saab.png",
-	"n_vw.png",
-	"n_alfa.png",
-	"n_lambo.png"
+	"h_saab.png",
+	"h_vw.png",
+	//"h_alfa.png",
+	"h_lambo.png"
 
 };
 
